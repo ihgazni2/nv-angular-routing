@@ -427,7 +427,7 @@ function creat_root_routes(r) {
     let main =`    {
         path:'',
         data:{},
-        component:'MainComponent'
+        component:MainComponent
     },\n`
     let body = creat_routes(r)
     let tail = `]\n`
