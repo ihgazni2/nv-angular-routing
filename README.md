@@ -271,8 +271,8 @@ generated main html
 
 other
 -----
-- some json will be generated in ./cfg-srv
-- you can DELETE them and the cfg file after generate
+    - some json will be generated in ./cfg-srv
+    - you can DELETE them and the cfg file after generate
 
     @#ls -l _cfg-srv/
     total 80
@@ -370,9 +370,9 @@ other
 
 ###flat-detail
 
-- this is used when your project have hundreds/thousands components
-- such as some auto-testbed
-- normally it is no need
+    - this is used when your project have hundreds/thousands components
+    - such as some auto-testbed
+    - normally it is no need
 
     [
         ...
@@ -401,9 +401,9 @@ other
 
 ###nest-detail
 
-- this is used when your project have hundreds/thousands components
-- such as some auto-testbed
-- normally it is no need
+    - this is used when your project have hundreds/thousands components
+    - such as some auto-testbed
+    - normally it is no need
 
 
     [
