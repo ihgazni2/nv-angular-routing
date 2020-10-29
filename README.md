@@ -27,6 +27,7 @@ generated DEMO
 --------------
 [generated nest-components](https://stackblitz.com/edit/angular-nv-routing-nest-components?file=src/app/app-routing.module.ts)
 
+[generated nest-modules](https://stackblitz.com/edit/angular-nv-routing-nest-modules?file=src%2Fapp%2Fapp-routing.module.ts)
 
 
 config\_format
@@ -626,4 +627,27 @@ API
 ===
 
 -   NO need, all cli
+
+
+Dependancy
+==========
+
+      "dependencies": {
+        "@babel/generator": "^7.12.1",
+        "@babel/parser": "^7.12.3",
+        "@babel/types": "^7.12.1",
+        "commander": "^6.2.0",
+        "efdir": "^1.1.6",
+        "ndtreejs": "^1.3.15",
+        "nvjson": "^1.2.5"
+      }
+
+CODE REFERENCE
+==============
+_(thanks to the routing example)_
+
+------------------------------------------------------------------
+[ng-matero](https://github.com/ng-matero/ng-matero)
+
+--------------------------------------------------------------------
 
