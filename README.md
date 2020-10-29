@@ -218,12 +218,12 @@ generated-routing
         {
             path:'',
             data:{},
-            component:'MainComponent'
+            component:MainComponent
         },
         {
             path: 'main',
             data: {},
-            component: 'MainComponent',
+            component: MainComponent,
             children: [
             ]
         },
@@ -231,19 +231,19 @@ generated-routing
     {
         path: 'design',
         data: {},
-        component: 'DesignComponent',
+        component: DesignComponent,
         children: [
             {
                 path: 'colors',
                 data: {},
-                component: 'ColorsComponent',
+                component: ColorsComponent,
                 children: [
                 ]
             },
             {
                 path: 'icons',
                 data: {},
-                component: 'IconsComponent',
+                component: IconsComponent,
                 children: [
                 ]
             }
