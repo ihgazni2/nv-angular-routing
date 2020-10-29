@@ -1,6 +1,6 @@
 {
   "name": "nv-angular-routing",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "init nested routing-module for a empty angular project",
   "main": "index.js",
   "scripts": {

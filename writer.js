@@ -169,7 +169,7 @@ function creat_and_write_component(r) {
 
 
 function creat_app_html(r) {
-    let html =`<router-outlet></router-outlet>`
+    let html =`<div><a routerLink="/main">BACK</a></div>\n<router-outlet></router-outlet>`
     return(html)
 }
 
