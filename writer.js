@@ -334,7 +334,7 @@ function creat_routes(r,lyr=1) {
                     lc = indent.repeat(lyr+1) +"loadChildren: " + lc + '\n'
                     arr.push(lc)
                 } else {
-                    let com = indent.repeat(lyr+1) +"component: '"+r.clsname +"',\n";
+                    let com = indent.repeat(lyr+1) +"component: "+r.clsname +",\n";
                     arr.push(com)
                     let sbracket = indent.repeat(lyr+1) + "children: [\n";
                     arr.push(sbracket)
