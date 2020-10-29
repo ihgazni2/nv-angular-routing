@@ -17,10 +17,10 @@ brief
 -------
 
 -   npm install nv-angular-routing -g
--   init a new project:    ng new proj            
--   goto the app dir:      cd proj/src/app/ 
--   edit a simple config:  vim cfg                        see [config\_format](#config\_format) 
--   just-one-command:      nv\_ngroute\_init --cfg ./cfg
+-   init a new project:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ng new proj            
+-   goto the app dir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      cd proj/src/app/ 
+-   edit a simple config:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  vim cfg    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   see [config\_format](#config\_format) 
+-   just-one-command: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     nv\_ngroute\_init --cfg ./cfg
 
 config\_format
 --------------
