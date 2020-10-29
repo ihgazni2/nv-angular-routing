@@ -64,20 +64,20 @@ config\_format
                       static@c
                   material@m
                       slider@m
-                          slider@c
+                          slider-basic@c
                           slide-toggle@c
                       progress@m
                           progress-bar@c
                           progress-spinner@c
                   sessions@c
                       register@m
-                          github@c
-                          email@c
-                          wx@c
+                          github-regis@c
+                          email-regis@c
+                          wx-regis@c
                       login@m
-                          github@c
-                          email@c
-                          wx@c
+                          github-login@c
+                          email-login@c
+                          wx-login@c
               ---------------------------------------------------------------------
        (default: "./cfg")
       -h, --help     display help for command
@@ -104,20 +104,20 @@ step
         static
     material
         slider
-            slider
+            slider-basic
             slide-toggle
         progress
             progress-bar
             progress-spinner
     sessions
         register
-            github
-            email
-            wx
+            github-regis
+            email-regis
+            wx-regis
         login
-            github
-            email
-            wx
+            github-login
+            email-login
+            wx-login
     --------------------------------------------------------------------------------
 
     @# nv_ngroute_init --cfg ./all-com.cfg
@@ -166,8 +166,8 @@ result
     │   │   └── progress-spinner
     │   │       └── progress-spinner.component.ts
     │   └── slider
-    │       ├── slider
-    │       │   └── slider.component.ts
+    │       ├── slider-basic
+    │       │   └── slider-basic.component.ts
     │       ├── slider.component.ts
     │       └── slide-toggle
     │           └── slide-toggle.component.ts
@@ -179,21 +179,21 @@ result
     │       └── settings.component.ts
     └── sessions
         ├── login
-        │   ├── email
-        │   │   └── email.component.ts
-        │   ├── github
-        │   │   └── github.component.ts
+        │   ├── email-login
+        │   │   └── email-login.component.ts
+        │   ├── github-login
+        │   │   └── github-login.component.ts
         │   ├── login.component.ts
-        │   └── wx
+        │   └── wx-login
         │       └── wx.component.ts
         ├── register
-        │   ├── email
-        │   │   └── email.component.ts
-        │   ├── github
-        │   │   └── github.component.ts
+        │   ├── email-regis
+        │   │   └── email-regis.component.ts
+        │   ├── github-regis
+        │   │   └── github-regis.component.ts
         │   ├── register.component.ts
-        │   └── wx
-        │       └── wx.component.ts
+        │   └── wx-regis
+        │       └── wx-regis.component.ts
         └── sessions.component.ts
     
     27 directories, 108 files
@@ -304,12 +304,12 @@ other
       design: { colors: {}, icons: {} },
       forms: { dynamic: {}, static: {} },
       material: {
-        slider: { slider: {}, 'slide-toggle': {} },
+        slider: { slider-basic: {}, 'slide-toggle': {} },
         progress: { 'progress-bar': {}, 'progress-spinner': {} }
       },
       sessions: {
-        register: { github: {}, email: {}, wx: {} },
-        login: { github: {}, email: {}, wx: {} }
+        register: { github-regis: {}, email-regis: {}, wx-regis: {} },
+        login: { github-login: {}, email-login: {}, wx-login: {} }
       }
     }
 
@@ -329,20 +329,20 @@ other
       '/routes/forms/static',
       '/routes/material',
       '/routes/material/slider',
-      '/routes/material/slider/slider',
+      '/routes/material/slider/slider-basic',
       '/routes/material/slider/slide-toggle',
       '/routes/material/progress',
       '/routes/material/progress/progress-bar',
       '/routes/material/progress/progress-spinner',
       '/routes/sessions',
       '/routes/sessions/register',
-      '/routes/sessions/register/github',
-      '/routes/sessions/register/email',
-      '/routes/sessions/register/wx',
+      '/routes/sessions/register/github-regis',
+      '/routes/sessions/register/email-regis',
+      '/routes/sessions/register/wx-regis',
       '/routes/sessions/login',
-      '/routes/sessions/login/github',
-      '/routes/sessions/login/email',
-      '/routes/sessions/login/wx'
+      '/routes/sessions/login/github-login',
+      '/routes/sessions/login/email-login',
+      '/routes/sessions/login/wx-login'
     ]
 
 
@@ -355,13 +355,13 @@ other
           key: 'wx',
           val: {},
           name: 'wx',
-          clsname: 'WxComponent',
-          rel_dir_path: './routes/sessions/register/wx',
-          rel_ts_path: './routes/sessions/register/wx/wx.component.ts',
-          rel_css_path: './routes/sessions/register/wx/wx.component.css',
-          rel_html_path: './routes/sessions/register/wx/wx.component.html',
-          rel_spec_ts_path: './routes/sessions/register/wx/wx.component.spec.ts',
-          rel_to_pmod_import_src: './routes/sessions/register/wx/wx.component',
+          clsname: 'WxRegisComponent',
+          rel_dir_path: './routes/sessions/register/wx-regis',
+          rel_ts_path: './routes/sessions/register/wx-regis/wx-regis.component.ts',
+          rel_css_path: './routes/sessions/register/wx-regis/wx-regis.component.css',
+          rel_html_path: './routes/sessions/register/wx-regis/wx-regis.component.html',
+          rel_spec_ts_path: './routes/sessions/register/wx-regis/wx-regis.component.spec.ts',
+          rel_to_pmod_import_src: './routes/sessions/register/wx-regis/wx-regis.component',
           rel_regis_dst: './app-routing.module.ts'
         },
         ...
@@ -386,13 +386,13 @@ other
         key: 'email',
         val: {},
         name: 'email',
-        clsname: 'EmailComponent',
-        rel_dir_path: './routes/sessions/login/email',
-        rel_ts_path: './routes/sessions/login/email/email.component.ts',
-        rel_css_path: './routes/sessions/login/email/email.component.css',
-        rel_html_path: './routes/sessions/login/email/email.component.html',
-        rel_spec_ts_path: './routes/sessions/login/email/email.component.spec.ts',
-        rel_to_pmod_import_src: './routes/sessions/login/email/email.component',
+        clsname: 'EmailLoginComponent',
+        rel_dir_path: './routes/sessions/login/email-login',
+        rel_ts_path: './routes/sessions/login/email-login/email-login.component.ts',
+        rel_css_path: './routes/sessions/login/email-login/email-login.component.css',
+        rel_html_path: './routes/sessions/login/email-login/email-login.component.html',
+        rel_spec_ts_path: './routes/sessions/login/email-login/email-login.component.spec.ts',
+        rel_to_pmod_import_src: './routes/sessions/login/email-login/email-login.component',
         rel_regis_dst: './app-routing.module.ts'
       },
       ....
@@ -456,7 +456,7 @@ example with lazy-loading
         static@c
     material@m
         slider@m
-            slider@c
+            slider-basic@c
             slide-toggle@c
         progress@m
             progress-bar@c
@@ -520,8 +520,8 @@ example with lazy-loading
     │       │           └── progress-spinner.component.ts
     │       └── slider
     │           ├── routes
-    │           │   ├── slider
-    │           │   │   └── slider.component.ts
+    │           │   ├── slider-basic
+    │           │   │   └── slider-basic.component.ts
     │           │   └── slide-toggle
     │           │       └── slide-toggle.component.ts
     │           ├── slider.module.ts
