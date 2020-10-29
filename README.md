@@ -222,33 +222,46 @@ generated-routing
         },
         {
             path: 'main',
-            data: {},
-            component: MainComponent,
             children: [
+                {
+                    path: '',
+                    data: {},
+                    component: MainComponent
+                }
             ]
         },
+
     ...
-    {
-        path: 'design',
-        data: {},
-        component: DesignComponent,
-        children: [
-            {
-                path: 'colors',
-                data: {},
-                component: ColorsComponent,
-                children: [
-                ]
-            },
-            {
-                path: 'icons',
-                data: {},
-                component: IconsComponent,
-                children: [
-                ]
-            }
-        ]
-    },
+        {
+            path: 'design',
+            children: [
+                {
+                    path: '',
+                    data: {},
+                    component: DesignComponent
+                },
+                {
+                    path: 'colors',
+                    children: [
+                        {
+                            path: '',
+                            data: {},
+                            component: ColorsComponent
+                        }
+                    ]
+                },
+                {
+                    path: 'icons',
+                    children: [
+                        {
+                            path: '',
+                            data: {},
+                            component: IconsComponent
+                        }
+                    ]
+                }
+            ]
+        },
     ...
     ]
     ;

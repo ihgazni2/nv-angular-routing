@@ -327,17 +327,55 @@ function creat_routes(r,lyr=1) {
                 arr.push(sblk)
                 let path = indent.repeat(lyr+1) +"path: '"+r.name +"',\n";
                 arr.push(path)
-                let data = indent.repeat(lyr+1) + "data: {},\n";
-                arr.push(data)
+                //let data = indent.repeat(lyr+1) + "data: {},\n";
+                //arr.push(data)
                 if(r.type === "module") {
                     let lc = creat_load_children(r)
                     lc = indent.repeat(lyr+1) +"loadChildren: " + lc + '\n'
                     arr.push(lc)
                 } else {
-                    let com = indent.repeat(lyr+1) +"component: "+r.clsname +",\n";
-                    arr.push(com)
+                    //let com = indent.repeat(lyr+1) +"component: "+r.clsname +",\n";
+                    //arr.push(com)
                     let sbracket = indent.repeat(lyr+1) + "children: [\n";
                     arr.push(sbracket)
+                    ////angular sucks
+                    /*
+                     * if not the top layer
+                     * in angular must be the below to let nest children route work
+                     * {
+                     *     path:'path',
+                     *     children: [
+                     *         // self child
+                     *         {
+                     *             path:'',
+                     *             data:{},
+                     *             component:XxxComponent
+                     *         },
+                     *         //---the below are real children
+                     *         {
+                     *             path:'child1',
+                     *             children:[
+                     *                 {
+                     *                     path:''
+                     *                     data:{},
+                     *                     component:Child1Component,
+                     *                  },
+                     *              ]
+                     *         }
+                     *     ]
+                     * }
+                     */
+                    let self_sblk = indent.repeat(lyr+2) + "{\n";
+                    arr.push(self_sblk)
+                    let self_path = indent.repeat(lyr+3) + "path: '"+'' +"',\n";
+                    arr.push(self_path)
+                    let self_data = indent.repeat(lyr+3) + "data: {},\n";
+                    arr.push(self_data)
+                    let com = indent.repeat(lyr+3) +"component: "+r.clsname +"\n";
+                    arr.push(com)
+                    let self_eblk = indent.repeat(lyr+2) + "},\n";
+                    arr.push(self_eblk)
+                    ////////                    
                     lyr = lyr + 1
                 }
                 lyr = lyr + 1
