@@ -22,6 +22,13 @@ brief
 -   edit a simple config:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  vim cfg    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   see [config\_format](#config\_format) 
 -   just-one-command: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     nv\_ngroute\_init --cfg ./cfg
 
+
+generated DEMO
+--------------
+[generated nest-components](https://stackblitz.com/edit/angular-nv-routing-nest-components?file=src/app/app-routing.module.ts)
+
+
+
 config\_format
 --------------
 
